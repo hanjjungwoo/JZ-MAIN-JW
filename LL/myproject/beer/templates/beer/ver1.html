@@ -10,10 +10,10 @@
     <meta charset="UTF-8">
     <title>Ver1)Recommendation</title>
     <style>
-        h1 { text-align: center; color: white;}
+        {% comment %} h1 { text-align: center; color: white;}
         h3 {
             text-align: center; color: white;
-        }
+        } {% endcomment %}
         img {
             display: block; margin: 0px auto;
             width:40%;
@@ -35,6 +35,7 @@
             font-size : 20px;
         }
         body{
+            display :block;
             {% comment %} background-image:url("{% static 'mg/ver1.jpg' %}"); {% endcomment %}
             background-size:100% 200%;
         }
@@ -45,7 +46,7 @@
         <nav>
             <a href="/">HOME</a>
             <a href="ver1">EXPERIENCE</a>
-            <a href="ver3">RECOMMENDATION</a>
+            <a href="ver3">TEMA</a>
             <div id="indicator"></div>
         </nav>
     </div>
@@ -53,7 +54,7 @@
     <div class="header">
         <a class="header-a" onclick="location.href='/'">너와 나드리</a>
     </div>
-<div style="background-color:#0d47a1;">
+<div class="ver1-header">
     <h1>경험했던 여행지 중 다시 가고싶은 여행지를 선택해주세요.</h1>
     <h3>비슷한 여행지를 추천해드립니다.</h3>
 </div>
