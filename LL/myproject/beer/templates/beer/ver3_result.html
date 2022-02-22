@@ -54,15 +54,17 @@
     </script>
     <link rel="stylesheet" href={% static 'css/style.css' %}>
     <link rel="stylesheet" href={% static 'css/reset.css' %}>
+    <link rel="stylesheet" href={% static 'css/toggle.css' %}>
     <style>
         img {
         border:1px solid 1px;
-        border-radius:20px;
-        display: block  ;
+        border-radius: 3vw;
+        display: inline-block;
+        text-align:center;
         min-width:40%; min-height:40%;
         max-width:40%; max-height:40%;
         }
-        h1 {color: #000; font-family: "jua"; font-size:3vw;}
+        h1 {color: #000; font-family: "jua"; font-size:3vw; margin-bottom:2%;}
     </style>
 </head>
 <body>
@@ -70,7 +72,7 @@
         <nav>
             <a href="/">HOME</a>
             <a href="ver1">EXPERIENCE</a>
-            <a href="ver3">TEMA</a>
+            <a href="ver3">THEME</a>
             <div id="indicator"></div>
         </nav>
     </div>
@@ -87,7 +89,7 @@
             <h2 class="result-h2"><a class="ver3-result-info" href='#'>관련 정보 보기</a><span id="toc-toggle" onclick="openCloseToc()">관련 영상 보기</span><a class="ver3-result-hotel"href="#">숙소 보러 가기</a>
                 <div id="toc-content">
                     <video id="result0" class="video-js vjs-default-skin vjs-big-play-centered"
-                    controls preload="none" style="width:55vw; height:55vh; text-align:center;"
+                    controls preload="none" style="width:50vw; height:55vh; margin:0 auto; display:block"
                     crossorigin="anonymous">
                         <source src="/static/md/{{result.0}}.webm" type="video/webm"/>
                         <source src="/static/md/{{result.0}}.mp4" type="video/mp4"/>
@@ -117,7 +119,7 @@
             <h2 class="result-h2"><a class="ver3-result-info" href='#'>관련 정보 더 보기</a><span id="toc-toggle1" onclick="openCloseToc1()">관련 영상 보기</span><a class="ver3-result-hotel"href="#">숙소 보러 가기</a>
                 <div id="toc-content1">    
                     <video id="result1" class="video-js vjs-default-skin vjs-big-play-centered"
-                    controls preload="none" style="width:55vw; height:55vh;"
+                    controls preload="none" style="width:50vw; height:55vh; margin:0 auto; display:block"
                     crossorigin="anonymous">
                         <source src="/static/md/{{result.0}}.webm" type="video/webm"/>
                         <source src="/static/md/{{result.0}}.mp4" type="video/mp4"/>
@@ -147,7 +149,7 @@
             <h2 class="result-h2"><a class="ver3-result-info" href='#'>관련 정보 더 보기</a><span id="toc-toggle2" onclick="openCloseToc2()">관련 영상 보기</span><a class="ver3-result-hotel"href="#">숙소 보러 가기</a>
             <div id="toc-content2">
                 <video id="result2" class="video-js vjs-default-skin vjs-big-play-centered"
-                controls preload="none" style="width:55vw; height:55vh;"
+                controls preload="none" style="width:50vw; height:55vh; margin:0 auto; display:block;"
                 crossorigin="anonymous">
                     <source src="/static/md/{{result.0}}.webm" type="video/webm"/>
                     <source src="/static/md/{{result.0}}.mp4" type="video/mp4"/>
@@ -176,7 +178,7 @@
             <h2 class="result-h2"><a class="ver3-result-info" href='#'>관련 정보 더 보기</a><span id="toc-toggle3" onclick="openCloseToc3()">관련 영상 보기</span><a class="ver3-result-hotel"href="#">숙소 보러 가기</a>
             <div id="toc-content3">
                 <video id="result3" class="video-js vjs-default-skin vjs-big-play-centered"
-                controls preload="none" style="width:55vw; height:55vh;"
+                controls preload="none" style="width:50vw; height:55vh; margin:0 auto; display:block;"
                 crossorigin="anonymous">
                     <source src="/static/md/{{result.0}}.webm" type="video/webm"/>
                     <source src="/static/md/{{result.0}}.mp4" type="video/mp4"/>
