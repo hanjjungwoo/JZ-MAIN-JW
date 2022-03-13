@@ -16,6 +16,7 @@
     <script src="../../static/js/videojs-pannellum-plugin.js"></script>
     <link rel="stylesheet" href={% static 'css/style.css' %}>
     <link rel="stylesheet" href={% static 'css/reset.css' %}>
+    <link rel="stylesheet" href={% static 'css/toggle.css'%}>
     <script>
         function openCloseToc4() {
             if(document.getElementById('toc-content4').style.display === 'block') {
@@ -35,26 +36,27 @@
                 document.getElementById('toc-toggle5').textContent = '그만보기';
               }
             }
-            function openCloseToc2() {
-              if(document.getElementById('toc-content2').style.display === 'block') {
-                document.getElementById('toc-content2').style.display = 'none';
-                document.getElementById('toc-toggle2').textContent = '관련 영상보기';
+            function openCloseToc6() {
+              if(document.getElementById('toc-content6').style.display === 'block') {
+                document.getElementById('toc-content6').style.display = 'none';
+                document.getElementById('toc-toggle6').textContent = '관련 영상보기';
               } else {
-                document.getElementById('toc-content2').style.display = 'block';
-                document.getElementById('toc-toggle2').textContent = '그만보기';
+                document.getElementById('toc-content6').style.display = 'block';
+                document.getElementById('toc-toggle6').textContent = '그만보기';
               }
             }
     </script>
 
     <style>
         img {
-        display: block; margin: 0px auto;
-        max-width:10%; max-height:10%;
-        }
-        h1 { text-align: center; color: white;}
-        h2 { text-align: center; }
-        h3 { text-align: center; }
-        a { text-decoration: none;}
+            border:1px solid 1px;
+            border-radius: 3vw;
+            display: inline-block;
+            text-align:center;
+            min-width:40%; min-height:40%;
+            max-width:40%; max-height:40%;
+            }
+        h1 {color: #000; font-family: "jua"; font-size:3vw; margin-bottom:2%;}
     </style>
 </head>
 <body>
@@ -76,87 +78,95 @@
             <h1>첫 번째 추천 여행지는 {{ result.0 }} 입니다.</h1>
         </div>
         <img src="static/mg/{{ result.0 }}.jfif" alt="사진은 수집중입니다😢">
-        <h2><a href="vr0">관련 정보 더 보기</a><span id="toc-toggle4" onclick="openCloseToc4()">관련 영상 보기</span>
+        <h2 class="result-h2"><a class="ver3-result-info" href='#'>관련 정보 보기</a><span id="toc-toggle4" onclick="openCloseToc4()">관련 영상 보기</span><a class="ver3-result-hotel"href="#">숙소 보러 가기</a>
             <div id="toc-content4">
-            <video id="result0" class="video-js vjs-default-skin vjs-big-play-centered"
-            controls preload="none" style="width:100%; height:600px;"
-            crossorigin="anonymous">
-                <source src="/static/md/{{result.0}}.webm" type="video/webm"/>
-                <source src="/static/md/{{result.0}}.mp4" type="video/mp4"/>
-                <p class="vjs-no-js">
-                    To view this video please enable JavaScript, and consider upgrading to
-                    a web browser that <a href="http://videojs.com/html5-video-support/"
-                    target="_blank">supports HTML5 video</a>
-                </p>
+                <video id="result0" class="video-js vjs-default-skin vjs-big-play-centered"
+                controls preload="none" style="width:50vw; height:55vh; margin:0 auto; display:block;"
+                crossorigin="anonymous">
+                    <source src="/static/md/{{result.0}}.webm" type="video/webm"/>
+                    <source src="/static/md/{{result.0}}.mp4" type="video/mp4"/>
+                    <p class="vjs-no-js">
+                        To view this video please enable JavaScript, and consider upgrading to
+                        a web browser that <a href="http://videojs.com/html5-video-support/"
+                        target="_blank">supports HTML5 video</a>
+                    </p>
+
+                    <script>
+                    videojs('result0', {
+                        plugins: {
+                            pannellum: {}
+                        }
+                    });
+                    
+                </script>
+                </video></h2>
+            </div>
+    </div>
+
+    <div class="ver3-wrapper">
+        <div class="ver3-result-contain">
+            <div>
+                <h1>두 번째 추천 여행지는 {{ result.1 }} 입니다.</h1>
+            </div>
+            <img src="static/mg/{{ result.1 }}.jfif" alt="사진은 수집중입니다😢">
+            <h2 class="result-h2"><a class="ver3-result-info" href='#'>관련 정보 보기</a><span id="toc-toggle5" onclick="openCloseToc5()">관련 영상 보기</span><a class="ver3-result-hotel"href="#">숙소 보러 가기</a>
+            <div id="toc-content5">
+                <video id="result1" class="video-js vjs-default-skin vjs-big-play-centered"
+                controls preload="none" style="width:50vw; height:55vh; margin:0 auto; display:block;"
+                crossorigin="anonymous">
+                    <source src="/static/md/{{result.1}}.webm" type="video/webm"/>
+                    <source src="/static/md/{{result.1}}.mp4" type="video/mp4"/>
+                    <p class="vjs-no-js">
+                        To view this video please enable JavaScript, and consider upgrading to
+                        a web browser that <a href="http://videojs.com/html5-video-support/"
+                        target="_blank">supports HTML5 video</a>
+                    </p>
+
+                </video>
+                </div></h2>
 
                 <script>
-                videojs('result0', {
+                videojs('result1', {
                     plugins: {
                         pannellum: {}
                     }
                 });
                 
                 </script>
-            </video></h2>
         </div>
     </div>
 
+    <div class="ver3-wrapper">
+        <div class="ver3-result-contain">
+            <div>
+                <h1>세 번째 추천 여행지는 {{ result.2 }} 입니다.</h1>
+            </div>
+            <img src="static/mg/{{ result.2 }}.jfif" alt="사진은 수집중입니다😢">
+            <h2 class="result-h2"><a class="ver3-result-info" href='#'>관련 정보 보기</a><span id="toc-toggle6" onclick="openCloseToc6()">관련 영상 보기</span><a class="ver3-result-hotel"href="#">숙소 보러 가기</a>
+            <source src="/static/mg/{{ result.2 }}.mp4" alt="영상은 수집중입니다😢">
+            <div id="toc-content6">
+                <video id="result2" class="video-js vjs-default-skin vjs-big-play-centered"
+                controls preload="none" style="width:50vw; height:55vh; margin:0 auto; display:block;"
+                crossorigin="anonymous">
+                    <source src="/static/md/{{result.2}}.webm" type="video/webm"/>
+                    <source src="/static/md/{{result.2}}.mp4" type="video/mp4"/>
+                    <p class="vjs-no-js">
+                        To view this video please enable JavaScript, and consider upgrading to
+                        a web browser that <a href="http://videojs.com/html5-video-support/"
+                        target="_blank">supports HTML5 video</a>
+                    </p>
+                </video>
 
-
-    <div style="background-color:#0d47a1;">
-        <h1>두 번째 추천 여행지는 {{ result.1 }} 입니다.</h1>
+                <script>
+                videojs('result2', {
+                    plugins: {
+                        pannellum: {}
+                    }
+                });
+                </script>
+            </div>
+        </div>
     </div>
-    <img src="static/mg/{{ result.1 }}.jfif" alt="사진은 수집중입니다😢">
-    <h2><a href="vr1">관련 정보 더 보기</a><span class="class-toc-toggle" onclick="openCloseTocClass()">관련 영상 보기</span>
-    <div class="class-toc-content">
-    <video id="result1" class="video-js vjs-default-skin vjs-big-play-centered"
-    controls preload="none" style="width:100%; height:600px;"
-    crossorigin="anonymous">
-        <source src="/static/md/{{result.1}}.webm" type="video/webm"/>
-        <source src="/static/md/{{result.1}}.mp4" type="video/mp4"/>
-        <p class="vjs-no-js">
-            To view this video please enable JavaScript, and consider upgrading to
-            a web browser that <a href="http://videojs.com/html5-video-support/"
-            target="_blank">supports HTML5 video</a>
-        </p>
-
-    </video>
-    </div></h2>
-
-    <script>
-    videojs('result1', {
-        plugins: {
-            pannellum: {}
-        }
-    });
-    
-    </script>
-
-    <div style="background-color:#0d47a1;">
-        <h1>세 번째 추천 여행지는 {{ result.2 }} 입니다.</h1>
-    </div>
-    <img src="static/mg/{{ result.2 }}.jfif" alt="사진은 수집중입니다😢">
-    <h2><a href="static/md/{{ result.2}}.mp4">관련 정보 더 보기</a></h2>
-    <source src="/static/mg/{{ result.2 }}.mp4" alt="영상은 수집중입니다😢">
-    <video id="result2" class="video-js vjs-default-skin vjs-big-play-centered"
-    controls preload="none" style="width:100%; height:600px;"
-    crossorigin="anonymous">
-        <source src="/static/md/{{result.2}}.webm" type="video/webm"/>
-        <source src="/static/md/{{result.2}}.mp4" type="video/mp4"/>
-        <p class="vjs-no-js">
-            To view this video please enable JavaScript, and consider upgrading to
-            a web browser that <a href="http://videojs.com/html5-video-support/"
-            target="_blank">supports HTML5 video</a>
-        </p>
-    </video>
-
-    <script>
-    videojs('result2', {
-        plugins: {
-            pannellum: {}
-        }
-    });
-    </script>
 </div>
 </body>
 </html>

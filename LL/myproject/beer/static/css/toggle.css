@@ -102,3 +102,81 @@
     text-decoration: none;
 
   }
+  #toc-content4 {
+    display: none;
+    background-color: #e9ecef;
+    height: 65vh;
+    padding-top: 10vh;
+    text-align: center;
+  }
+#toc-toggle4 {
+    background-color: #6394A1;
+    cursor: pointer;
+    color: #fff;
+    font-size:20px;
+    display: inline-block;
+    font-family: "jua";
+    font-size: 1.2vw;
+    width: 10vw;
+    height: 5vh;
+    padding-top: 3vh;
+    text-align: center;
+    border-radius:25px ;
+    margin-right: 1%;
+  }
+#toc-toggle4:hover {
+    text-decoration: none;
+
+  }
+  #toc-content5 {
+    display: none;
+    background-color: #e9ecef;
+    height: 65vh;
+    padding-top: 10vh;
+    text-align: center;
+  }
+#toc-toggle5 {
+    background-color: #6394A1;
+    cursor: pointer;
+    color: #fff;
+    font-size:20px;
+    display: inline-block;
+    font-family: "jua";
+    font-size: 1.2vw;
+    width: 10vw;
+    height: 5vh;
+    padding-top: 3vh;
+    text-align: center;
+    border-radius:25px ;
+    margin-right: 1%;
+  }
+#toc-toggle5:hover {
+    text-decoration: none;
+
+  }
+  #toc-content6 {
+    display: none;
+    background-color: #e9ecef;
+    height: 65vh;
+    padding-top: 10vh;
+    text-align: center;
+  }
+#toc-toggle6 {
+    background-color: #6394A1;
+    cursor: pointer;
+    color: #fff;
+    font-size:20px;
+    display: inline-block;
+    font-family: "jua";
+    font-size: 1.2vw;
+    width: 10vw;
+    height: 5vh;
+    padding-top: 3vh;
+    text-align: center;
+    border-radius:25px ;
+    margin-right: 1%;
+  }
+#toc-toggle6:hover {
+    text-decoration: none;
+
+  }
